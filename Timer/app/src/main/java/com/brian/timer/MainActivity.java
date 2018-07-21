@@ -234,9 +234,8 @@ public class MainActivity extends AppCompatActivity {
             mEndTime = sharedPreferences.getLong(END_TIME, 0);
             mTimeRemaining = mEndTime - System.currentTimeMillis();
             // check if time has run out when program is reopened
-            if (mTimeRemaining < 0) {
+            if (mTimeRemaining < 0)
                 mTimeRemaining = 0;
-            }
             else
                 startTimer();
         }
