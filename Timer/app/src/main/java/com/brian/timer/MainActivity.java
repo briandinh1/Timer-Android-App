@@ -236,7 +236,6 @@ public class MainActivity extends AppCompatActivity {
             // check if time has run out when program is reopened
             if (mTimeRemaining < 0) {
                 mTimeRemaining = 0;
-                mTimerActive = false;
             }
             else
                 startTimer();
