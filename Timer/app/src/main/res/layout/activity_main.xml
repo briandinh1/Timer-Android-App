@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"></LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="60sp" />
+
+    <EditText
+        android:id="@+id/edit_text_input"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_timer"
+        android:layout_toStartOf="@+id/set_button"
+        android:layout_weight="1"
+        android:hint="Minutes:"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/set_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text_view_timer"
+        android:layout_marginEnd="88dp"
+        android:layout_weight="1"
+        android:text="set" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:text="start" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/start_button"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/pause_resume_button"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reset_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/start_button"
+            android:layout_weight="1"
+            android:text="pause"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/pause_resume_button"
+            android:layout_weight="1"
+            android:text="reset"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+</RelativeLayout>
